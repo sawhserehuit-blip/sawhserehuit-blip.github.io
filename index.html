@@ -365,7 +365,8 @@ footer a { color: var(--ink-soft); }
     at 3am, and migrations into AWS that had to happen without a maintenance window.</p>
 
     <p>The work I'm moving toward is the other half — building the systems that operate
-    databases rather than operating them by hand. PostgreSQL internals, Python tooling,
+    databases rather than operating them by hand. That shift started with moving database
+    change onto CI/CD pipelines; it continues with PostgreSQL internals, Python tooling,
     change data capture, and distributed SQL.</p>
   </div>
 
@@ -399,12 +400,14 @@ footer a { color: var(--ink-soft); }
         <span class="when">Jan 2024 — present</span>
         <div class="what">
           <h3>Senior Database Engineer <span class="org">/ Mondia Media Group</span></h3>
-          <div class="todo" style="margin-top:10px">
-            <strong>Fill this in</strong>
-            Two or three lines on what you own here — engines, scale, and the hardest
-            problem you've solved. Nearly three years in the role, and it is the entry
-            a reader weighs most heavily.
-          </div>
+          <ul>
+            <li>Multi-engine estate on AWS — Aurora MySQL and RDS, with Microsoft SQL Server alongside.</li>
+            <li>Document-store workloads on MongoDB and Amazon DocumentDB.</li>
+            <li>Database change delivered through CI/CD pipelines rather than by hand.</li>
+          </ul>
+          <!-- Worth adding when you can put numbers to it: estate size (instances,
+               data volume, or traffic) and the hardest problem you have solved here.
+               Scale and a war story are what separate this entry from a job title. -->
         </div>
       </li>
 
