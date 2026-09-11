@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Saw Hser Eh is a database engineer with nine years running production systems for fintech and insurance. Senior Database Engineer at Mondia Media Group, Germany.">
+<title>Saw Hser Eh</title>
+<link rel="canonical" href="https://sawhserehuit-blip.github.io/">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Saw Hser Eh">
+<meta property="og:title" content="Saw Hser Eh — Database Engineer">
+<meta property="og:description" content="Nine years running production database systems for fintech and insurance. Senior Database Engineer at Mondia Media Group, Germany.">
+<meta property="og:url" content="https://sawhserehuit-blip.github.io/">
+<meta name="twitter:card" content="summary">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Saw Hser Eh",
+  "jobTitle": "Senior Database Engineer",
+  "url": "https://sawhserehuit-blip.github.io/",
+  "email": "mailto:sawhserehuit@gmail.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/hser-eh-25b139149/",
+    "https://github.com/sawhserehuit-blip"
+  ],
+  "worksFor": { "@type": "Organization", "name": "Mondia Media Group" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Information Technology, Myanmar" },
+  "knowsAbout": ["PostgreSQL", "MySQL", "Microsoft SQL Server", "MongoDB", "Amazon Aurora", "Database replication", "Query optimization", "Change data capture"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+
+<style>
+:root {
+  --paper:      #fbfaf7;
+  --ink:        #14202b;
+  --ink-soft:   #53656f;
+  --rule:       #d3dad9;
+  --accent:     #0f6b62;
+  --accent-wash: rgba(15, 107, 98, 0.09);
+
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --display: "Bitter", Georgia, "Times New Roman", serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:      #0e1519;
+    --ink:        #dde6e8;
+    --ink-soft:   #8ba1a9;
+    --rule:       #26343a;
+    --accent:     #56c9b8;
+    --accent-wash: rgba(86, 201, 184, 0.12);
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper:      #0e1519;
+  --ink:        #dde6e8;
+  --ink-soft:   #8ba1a9;
+  --rule:       #26343a;
+  --accent:     #56c9b8;
+  --accent-wash: rgba(86, 201, 184, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 15px;
+  line-height: 1.68;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+a:hover { text-decoration-style: dotted; }
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--paper); color: var(--ink);
+  padding: 10px 16px; border: 1px solid var(--accent); z-index: 10;
+}
+.skip-link:focus { left: 0; }
+
+/* ---- header ---------------------------------------------------------- */
+
+.site-header {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 26px 20px 16px;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* A DSN is how this field actually writes down "who and where" — so the
+   page's identity line is one. */
+.dsn {
+  font-size: 12px;
+  color: var(--ink-soft);
+  word-break: break-all;
+}
+.dsn .scheme { color: var(--accent); }
+
+.site-header nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.site-header nav a { text-decoration: none; color: var(--ink); }
+.site-header nav a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+
+/* ---- layout ---------------------------------------------------------- */
+
+main {
+  max-width: 820px;
+  margin: 0 auto;
+  padding-block: 34px 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1 {
+  font-family: var(--display);
+  font-size: clamp(30px, 6vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 6px;
+  text-wrap: balance;
+}
+
+.role {
+  font-size: 13px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 22px;
+}
+
+.bio { max-width: 66ch; }
+.bio p { margin: 0 0 1em; }
+
+section {
+  border-top: 1px solid var(--rule);
+  margin-top: 34px;
+  padding-top: 24px;
+}
+
+h2 {
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 18px;
+}
+
+/* ---- dated entries: a changelog, because that is what a career is ----- */
+
+ul { list-style: none; margin: 0; padding: 0; }
+
+.log li {
+  display: grid;
+  grid-template-columns: 10.5rem 1fr;
+  gap: 4px 16px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px dotted var(--rule);
+}
+.log li:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+
+.when {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+  padding-top: 3px;
+}
+
+.what { min-width: 0; }
+.what h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.45;
+}
+.what .org { color: var(--ink-soft); font-weight: 400; }
+.what p { margin: 6px 0 0; font-size: 14px; }
+.what ul { margin-top: 8px; }
+.what ul li {
+  font-size: 14px;
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 5px;
+  color: var(--ink-soft);
+}
+.what ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* ---- now ------------------------------------------------------------- */
+
+.now li {
+  display: grid;
+  grid-template-columns: 10.5rem 1fr;
+  gap: 4px 16px;
+  margin-bottom: 11px;
+}
+.now .what { font-size: 14px; }
+
+/* ---- stack ----------------------------------------------------------- */
+
+.stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
+  gap: 22px 30px;
+}
+.stack h3 {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 7px;
+  font-weight: 500;
+}
+.stack p { margin: 0; font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
+
+/* ---- certifications -------------------------------------------------- */
+
+.certs li {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 16px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.certs .when { padding-top: 0; }
+.certs .primary { color: var(--ink); }
+.certs .secondary { color: var(--ink-soft); }
+
+/* ---- placeholder ----------------------------------------------------- */
+
+.todo {
+  border: 1px dashed var(--accent);
+  background: var(--accent-wash);
+  padding: 14px 16px;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+.todo strong {
+  display: block;
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.todo code {
+  background: var(--rule);
+  padding: 1px 4px;
+  border-radius: 2px;
+  font-size: 12.5px;
+}
+
+/* ---- footer ---------------------------------------------------------- */
+
+footer {
+  max-width: 820px;
+  margin: 42px auto 0;
+  padding: 16px 20px 30px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 11.5px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+footer a { color: var(--ink-soft); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
+@media (max-width: 600px) {
+  body { font-size: 14px; }
+  .log li, .now li, .certs li { grid-template-columns: 1fr; gap: 2px; }
+  .when { padding-top: 0; }
+  .log li { padding-bottom: 16px; margin-bottom: 16px; }
+}
+
+@media print {
+  :root {
+    --paper: #fff; --ink: #000; --ink-soft: #444;
+    --rule: #bbb; --accent: #000; --accent-wash: #fff;
+  }
+  body { font-size: 11px; }
+  .site-header nav, .skip-link, footer, .todo { display: none; }
+  section { border-top: 0; margin-top: 14px; padding-top: 0; }
+  h2 { border-bottom: 1px solid #666; padding-bottom: 2px; page-break-after: avoid; }
+  .log li { page-break-inside: avoid; }
+  a { color: #000 !important; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <span class="dsn"><span class="scheme">postgresql://</span>saw@mondia-media:5432/senior_database_engineer?loc=de</span>
+  <nav aria-label="Profiles">
+    <a href="mailto:sawhserehuit@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/hser-eh-25b139149/">LinkedIn</a>
+    <a href="https://github.com/sawhserehuit-blip">GitHub</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <h1>Saw Hser Eh</h1>
+  <p class="role">Senior Database Engineer &middot; Germany</p>
+
+  <div class="bio">
+    <p>Nine years keeping production databases alive for people who lose money when they
+    aren't — payment infrastructure at <strong>2C2P</strong>, then hybrid-cloud estates at
+    <strong>Allianz Technology</strong>. Currently Senior Database Engineer at
+    <strong>Mondia Media Group</strong>.</p>
+
+    <p>Most of that has been the operational side of the discipline: SQL Server and MySQL
+    under load, replication topologies and failover, query plans that stopped being good
+    at 3am, and migrations into AWS that had to happen without a maintenance window.</p>
+
+    <p>The work I'm moving toward is the other half — building the systems that operate
+    databases rather than operating them by hand. PostgreSQL internals, Python tooling,
+    change data capture, and distributed SQL.</p>
+  </div>
+
+  <section id="now">
+    <h2>Now</h2>
+    <ul class="now">
+      <li>
+        <span class="when">Sep 2026 —</span>
+        <span class="what">PostgreSQL DBA intensive — internals, WAL, vacuum, planner behaviour.</span>
+      </li>
+      <li>
+        <span class="when">Sep 2026 —</span>
+        <span class="what">Python for database engineering — psycopg 3, CLI tooling, automation.</span>
+      </li>
+      <li>
+        <span class="when">Upcoming</span>
+        <span class="what">Distributed SQL: CockroachDB and Cloud Spanner.</span>
+      </li>
+      <li>
+        <span class="when">Ongoing</span>
+        <span class="what">German, A2 → B1.</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul class="log">
+
+      <li>
+        <span class="when">TODO — present</span>
+        <div class="what">
+          <h3>Senior Database Engineer <span class="org">/ Mondia Media Group</span></h3>
+          <div class="todo" style="margin-top:10px">
+            <strong>Fill this in</strong>
+            Add your start date and two or three lines on what you own here — engines,
+            scale, and the hardest problem you've solved so far. This is the most
+            important entry on the page and the only one a reader treats as current.
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <span class="when">May 2022 — TODO</span>
+        <div class="what">
+          <h3>Advanced Database Administrator <span class="org">/ Allianz Technology Thailand</span></h3>
+          <ul>
+            <li>MySQL on Linux and SQL Server across on-premises and hybrid cloud.</li>
+            <li>Migrated SQL Server workloads to MySQL; upgraded SQL Server 2012 &rarr; 2017.</li>
+            <li>Built master/slave replication on Percona clusters; supported Galera cluster setup.</li>
+            <li>Ran minor-version upgrades to close vulnerabilities, plus monthly patching and deployment.</li>
+            <li>Root-cause analysis and incident reporting for customer-facing teams.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <span class="when">May 2017 — May 2022</span>
+        <div class="what">
+          <h3>Database Administrator, Specialist <span class="org">/ 2C2P</span></h3>
+          <ul>
+            <li>Lead DBA for a released fintech payments product — schema design, configuration, performance testing.</li>
+            <li>Built an automated health-monitoring system across all servers with alerting on anomalies.</li>
+            <li>Query optimization and performance tuning; daily watch on deadlocks, blocking and timeouts.</li>
+            <li>Set up HA and disaster recovery; log shipping and replication.</li>
+            <li>Archived transactional data into a warehouse; built a data lake on S3 with Athena and QuickSight.</li>
+            <li>Operated AWS-managed databases — Aurora MySQL and RDS — with standardised configuration.</li>
+          </ul>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <section id="stack">
+    <h2>Stack</h2>
+    <div class="stack">
+      <div>
+        <h3>Engines</h3>
+        <p>SQL Server 2012/2017, MySQL, Percona XtraDB, PostgreSQL, MongoDB, Oracle</p>
+      </div>
+      <div>
+        <h3>AWS</h3>
+        <p>Aurora MySQL, RDS, DocumentDB, DMS, S3, Redshift, Athena, QuickSight</p>
+      </div>
+      <div>
+        <h3>Operations</h3>
+        <p>Replication and failover, clustering, HA/DR, log shipping, backup and restore, auditing, capacity and patching</p>
+      </div>
+      <div>
+        <h3>Performance</h3>
+        <p>Query optimization, execution-plan analysis, index strategy, deadlock and blocking diagnosis</p>
+      </div>
+      <div>
+        <h3>Platforms</h3>
+        <p>Linux (RHEL), Windows Server, Azure fundamentals</p>
+      </div>
+      <div>
+        <h3>Learning</h3>
+        <p>Python, Terraform, Kubernetes, CockroachDB, Cloud Spanner, Debezium</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="todo">
+      <strong>The section that matters most</strong>
+      Nothing here yet — and this is the gap between the CV you have and the roles you
+      want. One deep, finished project reads stronger than five tutorials. Aim at
+      something in change data capture or online migration, where nine years of
+      production judgement is visible and hard to fake: the failure modes you induced
+      on purpose, the benchmark numbers, the trade-off you chose and what it cost.
+      Replace this block with two or three entries linking to <code>github.com/sawhserehuit-blip</code>.
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul class="certs">
+      <li><span class="when">2022-09</span><span class="primary">AWS Certified Data Analytics — Specialty</span></li>
+      <li><span class="when">2021-01</span><span class="primary">AWS Certified Database — Specialty</span></li>
+      <li><span class="when">2020-08</span><span class="secondary">AWS Certified Cloud Practitioner</span></li>
+      <li><span class="when">2020-07</span><span class="secondary">Microsoft Certified: Azure Fundamentals</span></li>
+      <li><span class="when">2020-05</span><span class="secondary">Oracle Cloud Infrastructure Foundations</span></li>
+      <li><span class="when">2016-05</span><span class="secondary">Fundamental Information Technology Engineer — ITPEC</span></li>
+      <li><span class="when">2015-05</span><span class="secondary">Information Technology Passport — ITPEC</span></li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul class="log">
+      <li>
+        <span class="when">Nov 2017</span>
+        <div class="what">
+          <h3>B.C.Sc., Software Engineering <span class="org">/ University of Information Technology, Myanmar</span></h3>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <span>Saw Hser Eh — Germany</span>
+  <span><a href="mailto:sawhserehuit@gmail.com">sawhserehuit@gmail.com</a></span>
+</footer>
+
+</body>
+</html>
